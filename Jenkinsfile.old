@@ -17,6 +17,12 @@ pipeline {
       steps {
       sh 'mvn clean package'
        }
-    }    
+    }
+    stage ('Deploy-To-Tomcat') {
+            steps {
+                http://127.0.0.1:8082    
+              }      
+           }       
+    } 
   }
 }
