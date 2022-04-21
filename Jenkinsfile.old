@@ -22,7 +22,7 @@ pipeline {
             steps {
             deploy adapters: [tomcat9(path: '', url: 'http://127.0.0.1:8082')], contextPath: null, war: '**/*.war'
            }
-           }       
+      }       
     }
   }
 
