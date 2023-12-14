@@ -20,7 +20,7 @@ stage ('Build') {
 stage ('Deploy-To-Tomcat') {
             steps {
            sshagent(['tomcat']) {
-                sh 'scp -o StrictHostKeyChecking=no target/*.war ubuntu@52.206.7.62:/tomcat/apache-tomcat-9.0.84/webapps/webapp.war'
+                sh 'scp -o StrictHostKeyChecking=no target/*.war ubuntu@52.206.7.62:/home/ubuntu/tomcat/apache-tomcat-9.0.84/webapps/webapp.war'
 }
 }
 }
