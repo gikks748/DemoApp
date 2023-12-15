@@ -19,6 +19,7 @@ stage ('Check-Git-Secrets') {
         sh 'cat trufflehog'
       }
     }
+
 stage ('Build') {
       steps {
       sh 'mvn clean package'
