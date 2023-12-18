@@ -1,4 +1,4 @@
-pipeline {
+kpipeline {
   agent any 
   tools {
     maven 'Maven'
@@ -28,7 +28,7 @@ stage ('Source Composition Analysis') {
          sh 'bash owasp-dependency-check.sh'
          sh 'bash owasp-dependency-check.sh > owasp-log.txt 2>&1'
          sh 'cat owasp-log.txt'
-         sh 'cat /var/lib/jenkins/OWASP-Dependency-Check/reports/dependency-check-report.xml'
+         
               }
     }
 
