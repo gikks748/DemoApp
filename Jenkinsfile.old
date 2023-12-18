@@ -26,6 +26,8 @@ stage ('Source Composition Analysis') {
          sh 'wget "https://raw.githubusercontent.com/gikks748/DemoApp/master/owasp-dependency-check.sh" '
          sh 'chmod +x owasp-dependency-check.sh'
          sh 'bash owasp-dependency-check.sh'
+         sh 'bash owasp-dependency-check.sh > owasp-log.txt 2>&1'
+         sh 'cat owasp-log.txt'
          sh 'cat /var/lib/jenkins/OWASP-Dependency-Check/reports/dependency-check-report.xml'
               }
     }
