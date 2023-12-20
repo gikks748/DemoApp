@@ -53,7 +53,7 @@ stage ('Deploy-To-Tomcat') {
 }
 stage ('DAST') {
       steps {
-        sshagent(['zap']) {
+        sshagent(['jenkins']) {
          sh 'ssh -o  StrictHostKeyChecking=no ubuntu@18.234.238.33 "docker run -t owasp/zap2docker-stable zap-baseline.py -t http://http://54.196.165.182:8080/webapp/" || true'
         }
       }
